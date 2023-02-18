@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.twoactivityapp'
+    namespace 'com.example.allkotlinlearning'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.twoactivityapp"
+        applicationId "com.example.allkotlinlearning"
         minSdk 24
         targetSdk 33
         versionCode 1

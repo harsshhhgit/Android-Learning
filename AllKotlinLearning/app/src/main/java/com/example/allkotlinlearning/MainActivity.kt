@@ -1,4 +1,4 @@
-package com.example.twoactivityapp
+package com.example.allkotlinlearning
 
 import android.app.Notification
 import android.app.NotificationChannel
@@ -9,10 +9,6 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.CheckBox
-import android.widget.EditText
-import android.widget.ImageButton
-import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.res.ResourcesCompat
 

@@ -1,8 +1,7 @@
-package com.example.twoactivityapp
+package com.example.allkotlinlearning
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.MediaStore.Audio.Radio
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
