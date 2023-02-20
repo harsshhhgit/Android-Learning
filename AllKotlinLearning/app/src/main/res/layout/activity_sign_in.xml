@@ -28,6 +28,7 @@
         android:layout_gravity="center_horizontal"
         android:background="@drawable/inputfieldbg"
         app:boxStrokeWidth="0dp"
+        app:startIconDrawable="@drawable/baseline_verified_user_24"
         app:boxStrokeWidthFocused="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,6 +57,8 @@
         app:boxStrokeWidth="0dp"
         app:boxStrokeWidthFocused="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:endIconMode="password_toggle"
+        app:startIconDrawable="@drawable/baseline_lock_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
@@ -75,9 +78,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:backgroundTint="@color/teal_200"
+        android:backgroundTint="@color/tech_dark_blue"
         android:layout_gravity="center_horizontal"
-        android:background="@drawable/inputfieldbg"
         android:text="Sign In" />
 
 
