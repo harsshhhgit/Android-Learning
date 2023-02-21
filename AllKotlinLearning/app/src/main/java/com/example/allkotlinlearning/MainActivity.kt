@@ -8,9 +8,11 @@ import android.graphics.drawable.BitmapDrawable
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import androidx.core.content.res.ResourcesCompat
+import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
     private val NOTIFICATION_ID = 8
@@ -28,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         val loginBtn = findViewById<Button>(R.id.login)
         val signUpBtn = findViewById<Button>(R.id.signup)
         val toastBtn = findViewById<Button>(R.id.toast)
+        val snackBtn = findViewById<Button>(R.id.snackbarBtn)
         val formBtn = findViewById<Button>(R.id.form)
         val formAPI = findViewById<Button>(R.id.formapi)
 
@@ -49,6 +52,12 @@ class MainActivity : AppCompatActivity() {
         formBtn.setOnClickListener {
             intent = Intent(applicationContext, Form::class.java)
             startActivity(intent)
+        }
+//      ===================SnackBar Button===================
+        snackBtn.setOnClickListener {
+            Snackbar.make(it, "Snackbar Clicked", Snackbar.LENGTH_LONG).setAction("Close", View.OnClickListener {
+                Toast.makeText(this, "Snackbar Closed", Toast.LENGTH_SHORT).show()
+            }).show()
         }
 //      ===================Notification===================
         val notifyBtn = findViewById<Button>(R.id.notify)
@@ -83,6 +92,13 @@ class MainActivity : AppCompatActivity() {
 
         notifyBtn.setOnClickListener {
             nm.notify(NOTIFICATION_ID, notification)
+        }
+
+        //      ===================ToggleImplementation===================
+        val toggleBtnActivity = findViewById<Button>(R.id.togglebtnactivity)
+        toggleBtnActivity.setOnClickListener {
+            intent = Intent(applicationContext, ToggleBtnActivity::class.java)
+            startActivity(intent)
         }
     }
 }
