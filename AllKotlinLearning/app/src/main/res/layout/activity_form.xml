@@ -215,13 +215,42 @@
             </TableRow>
 
         </TableLayout>
-
-        <Button
-            android:id="@+id/submitbtn"
+        <TableLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="Submit" />
+            android:layout_gravity="center_horizontal">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <Button
+                    android:id="@+id/submitbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:text="Submit to Same Activity" />
+
+                <Button
+                    android:id="@+id/submitAnotherActbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Submit to Another Activity" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <Button
+                    android:id="@+id/submitFragmentbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:text="Submit to Fragment" />
+            </TableRow>
+        </TableLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -234,6 +263,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:text="Entered Details"
+                android:layout_marginTop="8dp"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -243,6 +273,13 @@
                 android:layout_height="wrap_content"
                 android:padding="10dp" />
         </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </FrameLayout>
     </LinearLayout>
 
 </ScrollView>
