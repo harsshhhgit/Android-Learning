@@ -15,9 +15,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         Log.d("MyActivity", "FirstActivity onCreate")
-        val toast = Toast.makeText(this, "FirstActivity onCreate", Toast.LENGTH_SHORT)
-        toast.setGravity(Gravity.TOP, 0, 250)
-        toast.show()
+//        val toast = Toast.makeText(this, "FirstActivity onCreate", Toast.LENGTH_SHORT)
+//        toast.setGravity(Gravity.TOP, 0, 250)
+//        toast.show()
 
         val textValueClick = findViewById<TextView>(R.id.textView)
         textValueClick.setOnClickListener{
@@ -35,26 +35,26 @@ class MainActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         Log.d("MyActivity", "FirstActivity onStart")
-        Toast.makeText(this, "FirstActivity onStart", Toast.LENGTH_SHORT).show()
+//        Toast.makeText(this, "FirstActivity onStart", Toast.LENGTH_SHORT).show()
     }
     override fun onResume() {
         super.onResume()
         Log.d("MyActivity", "FirstActivity onResume")
-        Toast.makeText(this, "FirstActivity onResume", Toast.LENGTH_SHORT).show()
+//        Toast.makeText(this, "FirstActivity onResume", Toast.LENGTH_SHORT).show()
     }
     override fun onPause() {
         super.onPause()
         Log.d("MyActivity", "FirstActivity onPause")
-        Toast.makeText(this, "FirstActivity onPause", Toast.LENGTH_SHORT).show()
+//        Toast.makeText(this, "FirstActivity onPause", Toast.LENGTH_SHORT).show()
     }
     override fun onStop() {
         super.onStop()
         Log.d("MyActivity", "FirstActivity onStop")
-        Toast.makeText(this, "FirstActivity onStop", Toast.LENGTH_SHORT).show()
+//        Toast.makeText(this, "FirstActivity onStop", Toast.LENGTH_SHORT).show()
     }
     override fun onDestroy() {
         super.onDestroy()
         Log.d("MyActivity", "FirstActivity onDestroy")
-        Toast.makeText(this, "FirstActivity onDestroy", Toast.LENGTH_SHORT).show()
+//        Toast.makeText(this, "FirstActivity onDestroy", Toast.LENGTH_SHORT).show()
     }
 }
