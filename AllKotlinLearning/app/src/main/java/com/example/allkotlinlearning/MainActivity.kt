@@ -1,8 +1,10 @@
 package com.example.allkotlinlearning
 
+import android.app.AlertDialog
 import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
+import android.content.DialogInterface
 import android.content.Intent
 import android.graphics.drawable.BitmapDrawable
 import android.os.Build
@@ -33,6 +35,7 @@ class MainActivity : AppCompatActivity() {
         val snackBtn = findViewById<Button>(R.id.snackbarBtn)
         val formBtn = findViewById<Button>(R.id.form)
         val formAPI = findViewById<Button>(R.id.formapi)
+        val dialogBtn = findViewById<Button>(R.id.dialogBtn)
 
 //      ===================Toast===================
         toastBtn.setOnClickListener {
@@ -58,6 +61,19 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(it, "Snackbar Clicked", Snackbar.LENGTH_LONG).setAction("Close", View.OnClickListener {
                 Toast.makeText(this, "Snackbar Closed", Toast.LENGTH_SHORT).show()
             }).show()
+        }
+//      ===================Dialog Button===================
+        var alertDialog = AlertDialog.Builder(this@MainActivity)
+        dialogBtn.setOnClickListener {
+            alertDialog.setTitle("Delete Employee")
+                .setMessage("Do you want to delete the employee")
+                .setPositiveButton("Yes", DialogInterface.OnClickListener { dialogInterface, i ->
+                    Toast.makeText(this@MainActivity, "Yes Clicked", Toast.LENGTH_SHORT).show()
+                })
+                .setNegativeButton("No", DialogInterface.OnClickListener { dialogInterface, i ->
+                    Toast.makeText(this@MainActivity, "No Clicked", Toast.LENGTH_SHORT).show()
+                })
+            alertDialog.create().show()
         }
 //      ===================Notification===================
         val notifyBtn = findViewById<Button>(R.id.notify)
