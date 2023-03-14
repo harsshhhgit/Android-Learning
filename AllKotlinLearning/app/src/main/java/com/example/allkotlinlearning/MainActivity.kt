@@ -65,8 +65,8 @@ class MainActivity : AppCompatActivity() {
 //      ===================Dialog Button===================
         var alertDialog = AlertDialog.Builder(this@MainActivity)
         dialogBtn.setOnClickListener {
-            alertDialog.setTitle("Delete Employee")
-                .setMessage("Do you want to delete the employee")
+            alertDialog.setTitle("Dialog Box")
+                .setMessage("It is just a dialog box")
                 .setPositiveButton("Yes", DialogInterface.OnClickListener { dialogInterface, i ->
                     Toast.makeText(this@MainActivity, "Yes Clicked", Toast.LENGTH_SHORT).show()
                 })
